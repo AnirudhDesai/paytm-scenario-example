@@ -61,6 +61,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MobileFileldsClass.cs" />
+    <Compile Include="PatmHomePagePOM.cs" />
+    <Compile Include="PaytmUrl.cs" />
+    <Compile Include="XpathClass.cs" />
     <Compile Include="PaytmScenarioSteps.cs" />
     <Compile Include="SpecFlowFeature1.feature.cs">
       <AutoGen>True</AutoGen>

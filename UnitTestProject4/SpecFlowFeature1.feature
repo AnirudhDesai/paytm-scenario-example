@@ -2,20 +2,20 @@
 	
 
 @mytag
-Scenario: Open Paytm website 
+Scenario: Open Paytm website & Validates services
 	Given I have entered Paytm website
-	When fields like Mobile,Electricity,DTH,Metro should be pesent
-	Then check all the corresponding fields are present
+	When fields like Mobile,Electricity,DTH,Metro are pesent
+	Then check all the corresponding fields are present or not
 
 @mytag
-Scenario: Validate Mobile Recharge 
+Scenario: Validate Mobile Recharge Button
 	Given I have entered Paytm website
 	And I click on Mobile option
 	Then Page should navigate to Url https://paytm.com/recharge
 
 
 @mytag
-Scenario: Paytm Recharge
+Scenario: Perform Paytm Recharge
 	Given I have entered Paytm website
 	And I click on Mobile option
 	And also I have entered Mobile number and Amount

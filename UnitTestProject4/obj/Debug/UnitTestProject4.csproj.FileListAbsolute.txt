@@ -14,6 +14,5 @@ c:\users\ee209973\documents\visual studio 2017\Projects\UnitTestProject4\UnitTes
 c:\users\ee209973\documents\visual studio 2017\Projects\UnitTestProject4\UnitTestProject4\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 c:\users\ee209973\documents\visual studio 2017\Projects\UnitTestProject4\UnitTestProject4\bin\Debug\Newtonsoft.Json.xml
 c:\users\ee209973\documents\visual studio 2017\Projects\UnitTestProject4\UnitTestProject4\bin\Debug\WebDriver.xml
-c:\users\ee209973\documents\visual studio 2017\Projects\UnitTestProject4\UnitTestProject4\obj\Debug\UnitTestProject4.csprojResolveAssemblyReference.cache
 c:\users\ee209973\documents\visual studio 2017\Projects\UnitTestProject4\UnitTestProject4\obj\Debug\UnitTestProject4.dll
 c:\users\ee209973\documents\visual studio 2017\Projects\UnitTestProject4\UnitTestProject4\obj\Debug\UnitTestProject4.pdb

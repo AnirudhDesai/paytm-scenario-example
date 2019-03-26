@@ -12,48 +12,42 @@ namespace UnitTestProject4
     {
         bool ElementNotFound;
 
-        IWebDriver driver = new ChromeDriver();
+        PaytmHomePagePOM paytmPom = new PaytmHomePagePOM();
 
         [Given(@"I have entered Paytm website")]
         public void GivenIHaveEnteredPaytmWebsite()
         {
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            driver.Navigate().GoToUrl("https://www.paytm.com");
-            driver.Manage().Window.Maximize();
+            paytmPom.NavigateToHomePageOfPaytm();
         }
 
 
         [Given(@"I click on Mobile option")]
         public void GivenIClickOnMobileOption()
         {
-            driver.FindElement(By.ClassName("_160X")).Click();
+            paytmPom.ClickOnMobileButton();
         }
 
         [Given(@"also I have entered Mobile number and Amount")]
         public void GivenAlsoIHaveEnteredMobileNumberAndAmount()
         {
-            driver.FindElement(By.XPath("//*[@id='app']/div/div[4]/div[1]/div[1]/div/div[2]/div[2]/ul/li[1]/div/div/input")).SendKeys("8618290261");
-            driver.FindElement(By.XPath("//*[@id='app']/div/div[4]/div[1]/div[1]/div/div[2]/div[2]/ul/li[3]/div[1]/div[1]/input")).SendKeys("100");
-
-
+            paytmPom.EnterMobileNumberAndAmount();
         }
 
         [When(@"I click on Proceed Recharge Button")]
         public void WhenIClickOnProceedRechargeButton()
         {
-            driver.FindElement(By.XPath("//*[@id='app']/div/div[4]/div[1]/div[1]/div/div[2]/div[5]/button")).Click();
+            paytmPom.ClickOnProceedRechargeButton();
         }
 
-
-        [When(@"fields like Mobile,Electricity,DTH,Metro should be pesent")]
-        public void WhenFieldsLikeMobileElectricityDTHMetroShouldBePesent()
+        [When(@"fields like Mobile,Electricity,DTH,Metro are pesent")]
+        public void WhenFieldsLikeMobileElectricityDTHMetroArePesent()
         {
             try
             {
-                driver.FindElement(By.XPath("//*[@id='app']/div/div[3]/div/div[1]/div/a[1]/div/img"));//Mobile 
-                driver.FindElement(By.XPath("//*[@id='app']/div/div[3]/div/div[1]/div/a[2]/div"));//electricity
-                driver.FindElement(By.XPath("//*[@id='app']/div/div[3]/div/div[1]/div/a[3]/div"));//DTH
-                driver.FindElement(By.XPath("//*[@id='app']/div/div[3]/div/div[1]/div/a[4]/div/img"));//Metro
+                paytmPom.driver.FindElement(By.XPath(XpathClass.mobile));//Mobile 
+                paytmPom.driver.FindElement(By.XPath(XpathClass.electricity));//electricity
+                paytmPom.driver.FindElement(By.XPath(XpathClass.dth));//DTH
+                paytmPom.driver.FindElement(By.XPath(XpathClass.metro));//Metro
             }
             catch (Exception Exp)
             {
@@ -61,8 +55,8 @@ namespace UnitTestProject4
             }
         }
 
-        [Then(@"check all the corresponding fields are present")]
-        public void ThenCheckAllTheCorrespondingFieldsArePresent()
+        [Then(@"check all the corresponding fields are present or not")]
+        public void ThenCheckAllTheCorrespondingFieldsArePresentOrNot()
         {
             Assert.IsFalse(ElementNotFound);
         }
@@ -71,15 +65,16 @@ namespace UnitTestProject4
         [Then(@"Page should navigate to Url https://paytm\.com/recharge")]
         public void ThenPageShouldNavigateToUrlHttpsPaytm_ComRecharge()
         {
-            Assert.AreEqual("https://paytm.com/recharge", driver.Url);
+            Assert.AreEqual(paytmPom.GetPaytmRechargeURl(), paytmPom.GetCurrentUrl());
         }
 
         [Then(@"Page should Navigate to Proceed to Pay and Url should be https://paytm\.com/coupons")]
         public void ThenPageShouldNavigateToProceedToPayAndUrlShouldBeHttpsPaytm_ComCoupons()
         {
-            //Assert.AreEqual("https://paytm.com/coupons", driver.Url);
+            Assert.AreEqual(paytmPom.GetPaytmCouponsURl(), paytmPom.GetCurrentUrl());
 
-            Assert.IsNotNull(driver.FindElement(By.XPath("//*[@id='app']")));
+           
+           // Assert.IsNotNull(paytmPom.GetXpathOfCoupnPage());
         }
     }
 }

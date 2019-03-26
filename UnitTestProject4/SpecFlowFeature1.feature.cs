@@ -88,12 +88,12 @@ namespace UnitTestProject4
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open Paytm website")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open Paytm website & Validates services")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Paytm Scenario")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
-        public virtual void OpenPaytmWebsite()
+        public virtual void OpenPaytmWebsiteValidatesServices()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open Paytm website", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open Paytm website & Validates services", null, new string[] {
                         "mytag"});
 #line 5
 this.ScenarioInitialize(scenarioInfo);
@@ -101,20 +101,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given("I have entered Paytm website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
- testRunner.When("fields like Mobile,Electricity,DTH,Metro should be pesent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("fields like Mobile,Electricity,DTH,Metro are pesent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8
- testRunner.Then("check all the corresponding fields are present", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("check all the corresponding fields are present or not", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Mobile Recharge")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Mobile Recharge Button")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Paytm Scenario")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
-        public virtual void ValidateMobileRecharge()
+        public virtual void ValidateMobileRechargeButton()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Mobile Recharge", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Mobile Recharge Button", null, new string[] {
                         "mytag"});
 #line 11
 this.ScenarioInitialize(scenarioInfo);
@@ -130,12 +130,12 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Paytm Recharge")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Perform Paytm Recharge")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Paytm Scenario")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
-        public virtual void PaytmRecharge()
+        public virtual void PerformPaytmRecharge()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Paytm Recharge", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Perform Paytm Recharge", null, new string[] {
                         "mytag"});
 #line 18
 this.ScenarioInitialize(scenarioInfo);
